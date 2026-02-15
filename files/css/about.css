@@ -1,2 +1,92 @@
 @import url("common.css");
 @import url("side_menu.css");
+@import url("slideshow.css");
+
+
+main {
+    margin: 40px 60px 120px 60px;
+    width: 66%;
+    float: left;
+    display: block;
+}
+
+.secondary {
+    padding-top: 2em;
+    padding-right: 3em;
+    width: 23.5%;
+    float: right;
+    clear: none;
+}
+
+/* Section spacing and organization */
+.about-section {
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+}
+
+.about-section h2 {
+    color: #a51417;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #a51417;
+}
+
+.mission-statement {
+    font-size: 21px !important;
+    line-height: 1.6 !important;
+    font-weight: 300;
+    color: #3d3d3d !important;
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-left: 4px solid #a51417;
+    margin-bottom: 1.5em !important;
+}
+
+.content-with-image {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex-shrink: 0;
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .content-with-image {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 1em;
+    }
+    
+    .mission-statement {
+        font-size: 19px !important;
+    }
+}
+
+.about-section p {
+    margin-bottom: 1em;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
