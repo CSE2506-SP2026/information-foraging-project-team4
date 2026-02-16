@@ -1,4 +1,207 @@
-@import url("common.css");
+@import url("header.css");
+@import url("footer.css");
+
+/* Reset and Typography */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body main {
+    color: #555;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.45;
+}
+
+main div {
+    display: block;
+    box-sizing: inherit;
+}
+
+main p {
+    color: rgb(85, 85, 85);
+    font-size: 19.2px;
+    line-height: 27.84px;
+    margin-bottom: 19.2px;
+}
+
+main h1 {
+    color: rgb(61, 61, 61);
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 48px;
+    margin-bottom: 32px;
+}
+
+main h2 {
+    color: rgb(85, 85, 85);
+    font-size: 27.648px;
+    font-weight: 300;
+    line-height: 36.8548px;
+    margin-bottom: 24px;
+}
+
+main h3 {
+    color: rgb(85, 85, 85);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+main p a,
+main h1 a,
+main h2 a,
+main h3 a,
+main h4 a {
+    color: #a51417;
+}
+
+/* Page layout - full width, no sidebar */
+#page-content {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
+#page-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 60px;
+    display: block;
+}
+
+/* Image container */
 .image-container {
     background-image: url("https://nurseryschool.wustl.edu/files/2015/03/group-holi.jpg");
+    background-size: 100% 400px;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+}
+
+/* Application sections */
+.application-section {
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.application-section:last-child {
+    border-bottom: none;
+}
+
+.application-section h2 {
+    color: #a51417;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #a51417;
+}
+
+.application-section h3 {
+    color: #a51417;
+    font-size: 22px;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Ordered list styling */
+.application-section ol {
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.application-section li {
+    font-size: 19.2px;
+    line-height: 1.6;
+    margin-bottom: 0.75em;
+    padding-left: 0.5em;
+}
+
+/* Form links section */
+.form-links {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-links h3 {
+    color: #a51417;
+    margin-top: 0;
+}
+
+.form-links p {
+    margin-bottom: 1.5em;
+}
+
+.form-links p:last-child {
+    margin-bottom: 0;
+}
+
+.form-link,
+.download {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #a51417;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.form-link:hover,
+.download:hover {
+    background-color: #8a1013;
+}
+
+/* HR styling */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 3em 0;
+}
+
+/* Strong text styling */
+strong {
+    font-weight: 600;
+    color: #3d3d3d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    
+    .form-links {
+        padding: 1.5em;
+    }
+    
+    .form-link,
+    .download {
+        display: block;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    .application-section ol {
+        margin-left: 1.5em;
+    }
 }
