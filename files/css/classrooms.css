@@ -1,26 +1,174 @@
-@import url("common.css");
+@import url("header.css");
+@import url("footer.css");
 @import url("side_menu.css");
+
+/* Reset and Typography */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body main {
+    color: #555;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.45;
+}
+
+main div {
+    display: block;
+    box-sizing: inherit;
+}
+
+main p {
+    color: rgb(85, 85, 85);
+    font-size: 19.2px;
+    line-height: 27.84px;
+    margin-bottom: 19.2px;
+}
+
+main h1 {
+    color: rgb(61, 61, 61);
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 48px;
+    margin-bottom: 32px;
+}
+
+main h2 {
+    color: rgb(85, 85, 85);
+    font-size: 27.648px;
+    font-weight: 300;
+    line-height: 36.8548px;
+    margin-bottom: 24px;
+}
+
+main h3 {
+    color: rgb(85, 85, 85);
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 37px;
+}
+
+main p a,
+main h1 a,
+main h2 a,
+main h3 a,
+main h4 a {
+    color: #a51417;
+}
+
+/* Page layout - avoid display:table issue */
+#page-content {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
+#page-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* List styles */
 main ul {
     margin-top: 1em;
+    margin-left: 2em;
 }
 
 main li {
     font-size: 1.15em;
     margin-bottom: 1em;
+    line-height: 1.6;
 }
 
+/* Classroom sections */
+.classroom-section {
+    margin-bottom: 4em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.classroom-section:last-child {
+    border-bottom: none;
+}
+
+.classroom-section h2 {
+    color: #a51417;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #a51417;
+}
+
+/* Individual classroom cards */
 .classroom {
-    margin-top: 6em;
-    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
     clear: both;
     overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.classroom h3 {
+    color: #a51417;
+    font-size: 24px;
+    margin-bottom: 1em;
 }
 
 .classroom img {
     float: left;
     margin-right: 2.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    height: auto;
 }
 
 .classroom p {
-    font-size: 1.15em;
+    margin-bottom: 1em;
+}
+
+.classroom-link {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background-color: #a51417;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.classroom-link:hover {
+    background-color: #8a1013;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        margin: 20px;
+        float: none;
+    }
+    
+    .secondary {
+        width: 100%;
+        float: none;
+        padding: 2em 20px;
+    }
+    
+    .classroom img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5em;
+        max-width: 100%;
+    }
 }
